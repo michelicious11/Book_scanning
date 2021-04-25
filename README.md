@@ -17,7 +17,7 @@ Class livre () {
 }
 
 
-Librairies (L)
+Librairies
   -	Tableau/liste de (0 --> n – 1) librairies avec des ID différents 
       o	Défini par l’ensemble de livres contenu dans la librairie (liste/tableau de livres)
       o	Défini par le temps en jours que sa prend pour l’inscription de la librairie
