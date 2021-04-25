@@ -18,7 +18,7 @@ Problem statement for the Online Qualication Round of Hash Code 2020
 
 
 ## Introduction
----
+
 Books allow us to discover fantasy worlds and beer understand the world we live in.
 They enable us to learn about everything from photography to compilers… and of
 course a good book is a great way to relax!
@@ -35,7 +35,6 @@ scanned at a scanning facility.
 **URL** : <https://storage.googleapis.com/coding-competitions.appspot.com/HC/2020/hashcode_2020_online_qualification_round.pdf>
 
 ## Description du probleme
----
 
 ### Books
 There are B dierent books with IDs from 0 to B–1. Many libraries can have a copy of
@@ -90,19 +89,17 @@ signup process on day 1, then:
 
 
 ## Langage de programmation 
----
+
 Python 3.8
 
 
 ## Demarrage
----
 
 1. Telecharger Python 3.8
 2. Creer sa propre branche dans github 
 
 
 ## Contributions
----
 
 Livres
   -	Tableau/liste de (0 --> n – 1) livres avec des ID différents ( 
@@ -123,3 +120,5 @@ Librairies
       o	Défini par le nombre de livres qui peuvent être scanné par jour lorsque la librairie inscrit (max)
 Proposition : 
 (variable globale) int idLibrairie;
+
+---
