@@ -43,9 +43,9 @@ one parameter: the score that is awarded when the book is scanned.
 Libraries
 There are L dierent libraries with IDs from 0 to L–1. Each library is described by the
 following parameters:
-● the set of books in the library,
-● the time in days that it takes to sign the library up for scanning,
-● the number of books that can be scanned each day from the library once the
++ the set of books in the library,
++ the time in days that it takes to sign the library up for scanning,
++ the number of books that can be scanned each day from the library once the
 library is signed up.
 
 ### Time
@@ -63,17 +63,17 @@ completes (that is, on the rst day immediately aer the signup process, see the g
 below). Books can be scanned in parallel from multiple libraries.
 
 For example, if:
-● the signup process for library 0 (that is, the library with ID 0) takes 2 days, and
-● the signup process for library 1 takes 3 days, and
-● library 1 is signed up before library 0
++ the signup process for library 0 (that is, the library with ID 0) takes 2 days, and
++  the signup process for library 1 takes 3 days, and
++  library 1 is signed up before library 0
 then
-● the signup process of library 1 starts on day 0, and finishes on day 2 (3 days in
++ the signup process of library 1 starts on day 0, and finishes on day 2 (3 days in
 total)
-● the first books from library 1 can be scanned staing on day 3 (the next day
++ the first books from library 1 can be scanned staing on day 3 (the next day
 after the signup process finishes)
-● the signup of library 0 starts on day 3 (the next day aer the signup process
++ the signup of library 0 starts on day 3 (the next day aer the signup process
 of library 0 is done) and nishes on day 4 (2 days in total)
-● the first books from library 0 can be scanned starting on day 5 (the next day
++ the first books from library 0 can be scanned starting on day 5 (the next day
 after the signup process finishes)
 
 ### Scanning
@@ -83,9 +83,9 @@ library has a maximum number of books that can be scanned from this library per 
 The scanning facility is big and can scan any number of books per day.
 For example, if library 0 has 5 books, can ship 2 books per day, and completes the
 signup process on day 1, then:
-● 2 books can be scanned on day 2
-● 2 books can be scanned on day 3
-● the one remaining book can be scanned on day 4
++ 2 books can be scanned on day 2
++ 2 books can be scanned on day 3
++ the one remaining book can be scanned on day 4
 
 
 ## Langage de programmation 
