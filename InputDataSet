@@ -14,17 +14,16 @@ def readInput(file):
     input = list(map(int, f.readline().split()))
     for i in range (0, numberOfBooks):
         B[i] = input[i]
-
     for j in range (0, numberOfLibraries):
-        input = list(map(int, f.readline().split()))
+        input = list(map(int, f.readline().split()))    #first line
         numberOfBooks = input[0]
-        Library.Library[j].time = input[1]
-        #B[j] = input[j]
-
-    
+        L[j] = Library.Library(j)
+        L[j].time = input[1]
+        L[j].maxToScan = input[2]
+        input = list(map(int, f.readline().split()))    #second line
+        for k in range(0, numberOfBooks):
+            L[j].books[k] = B[input[k]]
     f.close()
-
-
 
 readInput("Input.txt")
 print("22")
