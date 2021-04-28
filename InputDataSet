@@ -1,0 +1,30 @@
+import Book
+import Library
+
+def readInput(file):
+    B = {}
+    L = {}
+    bookID = 0
+    f = open(file, "r")
+    if not f: print("File not found"); exit(0)
+    input = list(map(int, f.readline().split()))
+    numberOfBooks = input[0]
+    numberOfLibraries = input[1]
+    numberOfDays = input[2]
+    input = list(map(int, f.readline().split()))
+    for i in range (0, numberOfBooks):
+        B[i] = input[i]
+
+    for j in range (0, numberOfLibraries):
+        input = list(map(int, f.readline().split()))
+        numberOfBooks = input[0]
+        Library.Library[j].time = input[1]
+        #B[j] = input[j]
+
+    
+    f.close()
+
+
+
+readInput("Input.txt")
+print("22")
