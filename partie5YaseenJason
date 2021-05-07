@@ -9,6 +9,6 @@ def partie5(file):
 
 
 l = partie5("Input.txt")                    #Pour tester
-print(l)          #Pour tester
-print(l[0])       #Pour tester
-print(l[0][0])    #Pour tester
+print(l)                                    #Pour tester
+print(l[0])                                 #Pour tester
+print(l[0][0])                              #Pour tester
