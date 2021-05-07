@@ -1,0 +1,14 @@
+def partie5(file):
+    linked_list_fichier = []
+    f = open(file, "r")
+    if not f: print("File not found"); exit(0)
+    for line in f.readlines():
+        linked_list_fichier.append(list(map(int, line.split())))
+        
+    print(linked_list_fichier)          #Pour tester
+    print(linked_list_fichier[0])       #Pour tester
+    print(linked_list_fichier[0][0])    #Pour tester
+    
+    f.close()
+
+partie5("Input.txt")                    #Pour tester
