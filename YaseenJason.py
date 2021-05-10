@@ -27,16 +27,16 @@ def Read_Document(file):
     return linked_list_fichier
 
 # Initialiser les variables globales nbr_books, nbr_libraries, nbr_days avec premiere ligne du text (premiere liste de la liste)
-def Set_data_scanning() :
+#def Set_data_scanning() :
 
-return
+#return
 
 # create des tuples pour chaque livre (input = line numero 2 du document, output = collection de tuples)
 #def Create_books()  :
 
     #return
 #def Extract_library_information():            # paires de liste apres (a partir de la 3e liste et +) : chaque paire de ligne = information pour une librairie
-                                             #   # donc creer une variable pour chaque librairie qui contient ses 2 lignes (une liste de liste) ex. librairie6 = [[xxx][xxxx]]
+                                              # donc creer une variable pour chaque librairie qui contient ses 2 lignes (une liste de liste) ex. librairie6 = [[xxx][xxxx]]
 
 #return
 
