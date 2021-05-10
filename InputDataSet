@@ -1,0 +1,38 @@
+import Book
+import Library
+from Scanning import librarySignup
+
+
+#La librairie avec l'ID 0 se contient à la position L[0] du dictionnaire L
+#Le livre x se contient à la position L[y].books[x] d'une librairie y du dictionnaire L
+#Le format: L[librairie].books[livre] = score du livre recherchée dans la librairie recherchée
+
+def readInput(file):
+    B = {}
+    L = {}
+    bookID = 0
+    f = open(file, "r")
+    if not f: print("File not found"); exit(0)
+    input = list(map(int, f.readline().split()))
+
+    numberOfBooks = input[0]
+    numberOfLibraries = input[1]
+    numberOfDays = input[2]
+
+    input = list(map(int, f.readline().split()))
+    for i in range (0, numberOfBooks):
+        B[i] = input[i]
+    for j in range (0, numberOfLibraries):
+        input = list(map(int, f.readline().split()))    #first line
+        numberOfBooks = input[0]
+        L[j] = Library.Library()
+        L[j].time = input[1]
+        L[j].maxToScan = input[2]
+        input = list(map(int, f.readline().split()))    #second line
+        for k in range(0, numberOfBooks):
+            L[j].books[k] = B[input[k]]                 #Peut être optimisé (pas obligé de créer un dictionnaire dans un dictionnaire)
+    librarySignup(B, L, numberOfDays)
+    f.close()
+
+readInput("Input.txt")
+
