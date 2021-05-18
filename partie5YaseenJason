@@ -10,6 +10,5 @@ def partie5(file):
     print(linked_list_fichier[0][0])    #Pour tester
     
     f.close()
-    return linked_list_fichier
 
 partie5("Input.txt")                    #Pour tester
