@@ -29,7 +29,7 @@ def readInput(file):
         input = list(map(int, f.readline().split()))    #second line
 
         for k in range(0, numberOfBooks):
-            L[j].books[input[k]] = B[input[k]]                 #Peut être optimisé (pas obligé de créer un dictionnaire dans un dictionnaire)
+            L[j].books[input[k]] = B[input[k]] 
     librarySignup(B, L, numberOfDays)
 
 
