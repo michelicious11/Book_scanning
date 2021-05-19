@@ -1,5 +1,8 @@
 import Book
 import Library
+from Scanning import librarySignup
+#La fonction Scanning n'est pas complet, donc si vous voulez 
+#tester le code, vous pouvez le mettre en commentaire
 
 def readInput(file):
     B = {}
@@ -8,22 +11,32 @@ def readInput(file):
     f = open(file, "r")
     if not f: print("File not found"); exit(0)
     input = list(map(int, f.readline().split()))
+
     numberOfBooks = input[0]
     numberOfLibraries = input[1]
     numberOfDays = input[2]
+
     input = list(map(int, f.readline().split()))
     for i in range (0, numberOfBooks):
         B[i] = input[i]
+
     for j in range (0, numberOfLibraries):
         input = list(map(int, f.readline().split()))    #first line
         numberOfBooks = input[0]
-        L[j] = Library.Library(j)
+        L[j] = Library.Library()
         L[j].time = input[1]
         L[j].maxToScan = input[2]
         input = list(map(int, f.readline().split()))    #second line
+
         for k in range(0, numberOfBooks):
-            L[j].books[k] = B[input[k]]
+            L[j].books[input[k]] = B[input[k]]                 #Peut être optimisé (pas obligé de créer un dictionnaire dans un dictionnaire)
+    librarySignup(B, L, numberOfDays)
+
+
+    print(L[0].books)
+    print(L[1].books)
+
     f.close()
 
 readInput("Input.txt")
-print("22")
+
