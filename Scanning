@@ -1,0 +1,30 @@
+import Book
+import Library
+#La fonction n'est pas compléter, donc c'est normal si sa fonctionne pas.
+
+def librarySignup(B, L, numberOfDays):
+    time = {}
+
+    index = 0
+    score = {}
+    while len(time) <= numberOfDays:
+        for i in range(0, index):
+            booksToShip = L[i].maxToScan - len(L[i].books)
+            if booksToShip > 0:
+                for j in range(0, L[i].maxToScan-1):
+                    if L[j] not in score:
+                        score[j] = L[i].books[j]
+                        L.pop(L[i].books[j])
+                else:
+                    break
+      
+        L[index].time = L[index].time - 1
+        time[len(time)] = index
+        if L[index].time <= 0 and index < len(L) - 1:
+            index += 1
+
+    #print(time)
+    #print(score)
+
+
+
