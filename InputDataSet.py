@@ -25,5 +25,5 @@ def readInput(file):
             L[j].books[k] = B[input[k]]
     f.close()
 
-readInput("Input.txt")
+readInput("Text_files/a_example.txt")
 print("22")
